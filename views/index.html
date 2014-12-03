@@ -3,17 +3,36 @@
 {% block content %}
 
 <div class="container">
-	<div id="content">
-	    <div id="days-container" class="col-xs-3">
-	        {% include 'partials/days.html' %}
+	<!-- tripView -->
+	<div id="trip" class="row">
+		<div id="day-buttons" class="col-xs-3">
+			<div class="btn-toolbar">
+				<div id="day-btn-container" class="btn-group">
+					<!-- [dayButtonView] -->
+				</div>
+			    <button id="add-day" class="btn btn-default">+</button>
+		    </div>
+		    <!-- dayPanelView -->
+		    <div id="day-panel"></div>
 	    </div>
 	    <div class="col-xs-9">
 	        <div class="row">
-	            {% include 'partials/choose.html' %}
+	            <div class="col-xs-4 hotels choose">
+				    <h4>Hotels</h4>
+				    <!-- activitySelectView -->
+				</div>
+				<div class="col-xs-4 thingsToDo choose">
+				    <h4>Things To Do</h4>
+				    <!-- activitySelectView -->
+				</div>
+				<div class="col-xs-4 restaurants choose">
+				    <h4>Restaurants</h4>
+				    <!-- activitySelectView -->
+				</div>
 	        </div>
 	        <div id="map-canvas"></div>
 	    </div>
-	</div>
+    </div>
 </div>
 
 {% endblock %}

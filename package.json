@@ -1,10 +1,10 @@
 {
-  "name": "myCode",
-  "version": "1.0.0",
+  "name": "tripplanner",
+  "version": "0.0.0",
   "description": "",
-  "main": "app.js",
+  "private": true,
   "scripts": {
-    "start": "nodemon -e js,css,scss,html ./app.js"
+    "start": "nodemon -e js,html,scss ./app.js"
   },
   "author": "",
   "license": "ISC",

@@ -20,8 +20,7 @@ app.use(cookieParser());
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use(sassMiddleware({
 	src: __dirname + '/assets',
-	dest: __dirname + '/public',
-	debug: true
+	dest: __dirname + '/public'
 }));
 app.use(express.static(__dirname + '/public'));
 

@@ -1,0 +1,20 @@
+{
+  "name": "myCode",
+  "version": "0.0.0",
+  "authors": [
+    "Omri Bernstein <hippiccolo@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "bootstrap": "~3.3.1",
+    "underscore": "~1.7.0"
+  }
+}

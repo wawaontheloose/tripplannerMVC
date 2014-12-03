@@ -10,11 +10,16 @@ router.get('/', function(req, res) {
 				eachDone(err);
 			});
 		},
-		function(err, data) {
+		function(err) {
 			if (err) return next(err);
 			res.render('index')
 		}
 	);
 });
+
+router.use('/days', require('./days'));
+router.use('/hotels', require('./hotels'));
+router.use('/restaurants', require('./restaurants'));
+router.use('/thingsToDo', require('./thingsToDo'));
 
 module.exports = router;

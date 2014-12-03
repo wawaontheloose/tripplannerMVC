@@ -30,9 +30,17 @@ var ThingToDoSchema = new mongoose.Schema({
 	age_range: String
 });
 
+var daySchema = new mongoose.Schema({
+	day_number: Number,
+	hotel: {type: mongoose.Schema.Types.ObjectId, ref: 'Hotel'},
+	restaurants: [{type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant'}],
+	thingsToDo: [{type: mongoose.Schema.Types.ObjectId, ref: 'ThingToDo'}]
+});
+
 module.exports = {
 	Place: mongoose.model('Place', PlaceSchema),
 	Hotel: mongoose.model('Hotel', HotelSchema),
 	Restaurant: mongoose.model('Restaurant', RestaurantSchema),
-	ThingToDo: mongoose.model('ThingToDo', ThingToDoSchema)
+	ThingToDo: mongoose.model('ThingToDo', ThingToDoSchema),
+	Day: mongoose.model('Day', daySchema)
 };

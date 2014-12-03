@@ -33,5 +33,5 @@ app.use(function(req, res, next, err) {
 
 var port = process.env.PORT || 3000;
 app.listen(port, function() {
-	debug("Port " + port + " has something for you");
+	debug("Be a dear and go to port " + port);
 });

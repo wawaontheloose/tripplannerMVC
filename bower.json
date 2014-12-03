@@ -12,5 +12,9 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "underscore": "~1.7.0",
+    "bootstrap": "~3.3.1"
+  }
 }

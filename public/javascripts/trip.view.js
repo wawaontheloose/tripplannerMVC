@@ -7,9 +7,14 @@ var TripView = Backbone.View.extend({
 		this.listenTo(temp_days, 'add', this.createDayBtn);
 		this.model = new Trip();
 	},
+
 	addDay: function() {
 		temp_days.add({});
-		console.log('adding day!')},
+
+		$.post('/days', {day_number: temp_days.length} , function(newDay){
+			console.log(newDay);	
+		});
+	},
 
 	createDayBtn: function(dayModel){
 

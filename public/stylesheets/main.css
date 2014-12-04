@@ -34,3 +34,6 @@ body {
 
 #this-title {
   color: #428bca; }
+
+.dropdown-toggle {
+  width: 70%; }

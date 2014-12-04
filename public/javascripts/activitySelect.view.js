@@ -12,9 +12,12 @@ var ActivitySelectView = Backbone.View.extend({
 
 		var dropDown = new DropDownView().render();
 		var hotelFill = new DropFill().render('hotels');
-		console.log(this.$el.find('.choose.hotels'));
+		var thingsFill = new DropFill().render('thingsToDo');
+		var restaurantsFill = new DropFill().render('restaurants');
 		this.$el.find('.choose').append(dropDown.$el);
-		this.$el.find('.dropdown-menu').append(hotelFill.$el);
+		this.$el.find('.hotels .dropdown-menu').append(hotelFill.$el);
+		this.$el.find('.thingsToDo .dropdown-menu').append(thingsFill.$el);
+		this.$el.find('.restaurants .dropdown-menu').append(restaurantsFill.$el);
 
 	},
 

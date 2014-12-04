@@ -8,15 +8,12 @@ var DropFill = Backbone.View.extend({
 
 
 		$.get('/' + filler, function(fills){
-
-						
-			
+			for(var i=0; i< fills.length; i++){
+				that.$el.append(that.buildHTML( { name: fills[i].name }));
+			}
 			// }
 		})
-
-		console.log(that.$el);
-		that.$el.append('<li> "hello" </li>');	
-
+			
 		return that; //for chaining
 
 

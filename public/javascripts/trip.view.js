@@ -6,6 +6,7 @@ var TripView = Backbone.View.extend({
 	initialize: function(){
 		this.listenTo(temp_days, 'add', this.createDayBtn);
 		this.model = new Trip();
+
 	},
 
 	addDay: function() {

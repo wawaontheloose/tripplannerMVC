@@ -3,8 +3,18 @@ var DayButtonView = Backbone.View.extend({
 
 	render: function() {
 
-    this.setElement(this.buildHTML({dayNum: temp_days.length}));
+		this.setElement(this.buildHTML(this.model.attributes));
 
     return this; //for chaining
-  }
+	},
+
+	initialize: function() {
+		this.render();
+	},
+	makeCurrent: function() {
+		this.trigger('dayChange', this.model);
+	},
+	events: {
+		'click': 'makeCurrent'
+	}
 });
